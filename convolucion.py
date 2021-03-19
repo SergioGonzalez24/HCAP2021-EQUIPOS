@@ -35,7 +35,10 @@ IGS=cv2.cvtColor(IRGB,cv2.COLOR_BGR2GRAY)
 print(IGS.shape)
 '''
 #funcion de convolucion
-R1 = maxpoolGlobal(2)
+R1 = maxpoolGlobal(1)
+R2 = maxpoolGlobal(2)
+R3 = maxpoolGlobal(3)
+R4 = maxpoolGlobal(4)
 R=convolucion(R1,Kn)
 print(R)
 print(R.shape)
