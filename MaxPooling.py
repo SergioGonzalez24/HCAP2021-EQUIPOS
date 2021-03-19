@@ -1,3 +1,4 @@
+import numpy as np
 def MaxPoolingDos(Img):
     fr=len(Img)//2
     cr=len(Img[0])//2
@@ -6,12 +7,13 @@ def MaxPoolingDos(Img):
 
     #Proceso del maxPooling
     a=0
-    b=0
-    for i in range3(0,len(Img),2):
-        for j in range3(0,len(Img),2):
-           np.amax(I[a:i+1,b:j+1])
-            b=j+1
-            a=i+1
+    for i in range(0,len(Img),2):
+        b=0
+        for j in range(0,len(Img),2):
+            Resultado[a][b]=np.amax(Img[i:i+2,j:j+2])
+            b+=1
+        a+=1
+    return Resultado
 
 
 
