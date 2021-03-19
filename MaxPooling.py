@@ -18,26 +18,28 @@ def maxpoolGlobal(res):
             a+=1
         return Resultado
 
-    Img=cv2.imread('002.jpeg')
+    Img=cv2.imread('002GS.jpeg')
     Img2=cv2.imread('003GS.jpeg')
     Img3=cv2.imread('008GS.jpeg')
     Img4=cv2.imread('011GS.jpeg')
 
 
     if res == 1:
-        R1=MaxPoolingDos(Img)
+        R=MaxPoolingDos(Img)
         #print(R1)
 
     elif res == 2:
-        R2=MaxPoolingDos(Img2)
+        R=MaxPoolingDos(Img2)
         #print(R2)
     elif res == 3:
-        R3=MaxPoolingDos(Img3)
+        R=MaxPoolingDos(Img3)
         #print(R3)
 
     elif res == 4:
-        R4=MaxPoolingDos(Img4)
+        R=MaxPoolingDos(Img4)
         #print(R4)
+
+    return R
 '''
 try:
     maxpoolGlobal(1)
