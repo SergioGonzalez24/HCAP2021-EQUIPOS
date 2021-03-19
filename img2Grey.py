@@ -1,15 +1,11 @@
 import cv2
 import numpy as np
 
+
 def img2Grey(original,nombre):
 
     IRGB= cv2.imread(original)
-    print(IRGB)
-    print(IRGB.shape)
-    print("Lineas agregadas en la rama2")
     IGS=cv2.cvtColor(IRGB,cv2.COLOR_BGR2GRAY)
-    print(IGS)
-    print(IGS.shape)
     return cv2.imwrite(nombre,IGS)
 
 
