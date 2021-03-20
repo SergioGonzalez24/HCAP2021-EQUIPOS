@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from MaxPooling import maxpoolGlobal
+
 
 def convolucion(original,Kernel):
     fr=len(original)-(len(Kernel)-1)
@@ -21,6 +21,9 @@ def convolucion(original,Kernel):
                 Resultado[i][j]=255
     return Resultado
 
+
+from MaxPooling import maxpoolGlobal
+
 '''
 #imagenes
 K=[[-1,0,1],[-1,0,1],[-1,0,1]]
@@ -40,3 +43,22 @@ R=convolucion(R1,Kn)
 print(R)
 print(R.shape)
 cv2.imwrite('002C.jpg',R)
+
+R2= maxpoolGlobal(2)
+R=convolucion(R2,Kn)
+print(R)
+print(R.shape)
+cv2.imwrite('003C.jpg',R)
+
+R3 = maxpoolGlobal(2)
+R=convolucion(R3,Kn)
+print(R)
+print(R.shape)
+cv2.imwrite('008C.jpg',R)
+
+R4 = maxpoolGlobal(2)
+R=convolucion(R4,Kn)
+print(R)
+print(R.shape)
+cv2.imwrite('011C.jpg',R)
+
