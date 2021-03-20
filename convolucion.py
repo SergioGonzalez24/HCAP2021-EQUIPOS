@@ -62,4 +62,5 @@ R=convolucion(R4,Kn)
 print(R)
 print(R.shape)
 cv2.imwrite('011C.jpg',R)
+#HOLA TEAM         
 
