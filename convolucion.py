@@ -39,6 +39,7 @@ print(IGS.shape)
 '''
 #funcion de convolucion
 R1 = maxpoolGlobal(2)
+print(R1.shape)
 R=convolucion(R1,Kn)
 print(R)
 print(R.shape)
