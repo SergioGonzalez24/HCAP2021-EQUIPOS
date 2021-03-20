@@ -36,9 +36,14 @@ Img2=cv2.imread('003.jpeg')
 Img3=cv2.imread('008.jpeg')
 Img4=cv2.imread('011.jpeg')
 
-#funcion de convolucion con Kn
+
 
 #Imagen 1 002GS.jpeg
+
+#funcion de convolucion con Kn
+print("\n")
+print("___________________________","\n","Imagen 1 002.jpeg Kernel 1")
+
 
 print(Img.shape,"\n")
 IGS=cv2.cvtColor(Img,cv2.COLOR_BGR2GRAY)
@@ -46,53 +51,41 @@ IGS=cv2.cvtColor(Img,cv2.COLOR_BGR2GRAY)
 R1Conv1 = convolucion(IGS,Kn)
 print(R1Conv1)
 print(R1Conv1.shape,"\n")
-cv2.imwrite('002C.jpeg',R1Conv1)
+cv2.imwrite('002C1.jpeg',R1Conv1)
 
-R1Max1 = MaxPoolingDos("002C.jpeg")
+ImgC_1_1 = cv2.imread('002C1.jpeg')
+R1Max1 = MaxPoolingDos(ImgC_1_1)
 print(R1Max1.shape,"\n")
 
 R1Conv2 = convolucion(R1Max1,Kn)
 print(R1Conv2,R1Conv2.shape, sep = "\n")
-cv2.imwrite('002C.jpeg',R1Conv2)
+cv2.imwrite('002C2.jpeg',R1Conv2)
 
-R1Max2 = MaxPoolingDos("002C.jpeg")
+ImgC_1_2 = cv2.imread('002C2.jpeg')
+R1Max2 = MaxPoolingDos(ImgC_1_2)
 print(R1Max2.shape,"\n")
 
-'''
+#funcion de convolucion con In
 
+print("\n")
+print("___________________________","\n","Imagen 1 002.jpeg Kernel 2")
 
-IRGB=cv2.imread('002.jpeg')
-IGS=cv2.cvtColor(IRGB,cv2.COLOR_BGR2GRAY)
-print(IGS.shape)
+print(Img.shape,"\n")
+IGS=cv2.cvtColor(Img,cv2.COLOR_BGR2GRAY)
 
-#funcion de convolucion
-R=convolucion(IGS,Kn)
-print(R)
-print(R.shape)
-cv2.imwrite('002C.jpg',R)
+R1Conv1 = convolucion(IGS,In)
+print(R1Conv1)
+print(R1Conv1.shape,"\n")
+cv2.imwrite('002C1.jpeg',R1Conv1)
 
+ImgC_1_1 = cv2.imread('002C1.jpeg')
+R1Max1 = MaxPoolingDos(ImgC_1_1)
+print(R1Max1.shape,"\n")
 
+R1Conv2 = convolucion(R1Max1,In)
+print(R1Conv2,R1Conv2.shape, sep = "\n")
+cv2.imwrite('002C2.jpeg',R1Conv2)
 
-
-
-
-R2= maxpoolGlobal(2)
-R=convolucion(R2,Kn)
-print(R)
-print(R.shape)
-cv2.imwrite('003C.jpg',R)
-
-R3 = maxpoolGlobal(2)
-R=convolucion(R3,Kn)
-print(R)
-print(R.shape)
-cv2.imwrite('008C.jpg',R)
-
-R4 = maxpoolGlobal(2)
-R=convolucion(R4,Kn)
-print(R)
-print(R.shape)
-cv2.imwrite('011C.jpg',R)
-#HOLA TEAM         
-
-'''
+ImgC_1_2 = cv2.imread('002C2.jpeg')
+R1Max2 = MaxPoolingDos(ImgC_1_2)
+print(R1Max2.shape,"\n")
